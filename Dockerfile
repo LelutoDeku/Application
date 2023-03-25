@@ -5,4 +5,4 @@ COPY pom.xml /usr/local/service/pom.xml
 COPY src /usr/local/service/src
 WORKDIR /usr/local/service
 RUN mvn package
-CMD ["java","-cp","target/b_r_m.assignment-1.0-SNAPSHOT.jar","b_r_m.assignment"]
+CMD ["java","-cp","target/b_r_m.assignment-1.0-SNAPSHOT.jar","devops.b_r_m.main"]

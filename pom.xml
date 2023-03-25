@@ -25,7 +25,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>devops.b_r_m.assignment.main</mainClass>
+                            <mainClass>devops.b_r_m.main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
