@@ -1,4 +1,8 @@
 FROM openjdk:11
-EXPOSE 8080
-ADD C:/Users/Hammad/.jenkins/workspace/application/target/b_r_m.assignment-1.0-SNAPSHOT.jar b_r_m.assignment-1.0-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar", "/b_r_m.assignment-1.0-SNAPSHOT.jar"]
+RUN apt-get update
+RUN apt-get install -y maven
+COPY pom.xml /usr/local/service/pom.xml
+COPY src /usr/local/service/src
+WORKDIR /usr/local/service
+RUN mvn package
+CMD ["java","-cp","target/b_r_m.assignment-1.0-SNAPSHOT.jar","b_r_m.assignment"]
