@@ -31,5 +31,6 @@ public class Main {
         m.diff(x,y);
         m.mul(x,y);
         m.div(x,y);
+        sc.close();
     }
 }
